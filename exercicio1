@@ -1,0 +1,23 @@
+# 1) Explique ponto de montagem com exemplos.
+
+R: Ponto de montagem refere-se ao diretório em que será montada uma partićão. É o ponto "raiz" daquela partićão, onde todos os conteúdos (diretórios e arquivos) presentes lá dentro ocupam espaćo da partićão montada (a não ser que determinado diretório também seja um ponto de montagem, como exemplo o /home, que caso seja um ponto de montagem, não ocupa espaćo em /)
+
+EXEMPLO (TABELA DE DISPOSITIVOS DO SISTEMA E SEUS ESPAĆOES OCUPADOS NO MESMO, ADQUIRIDA COM O COMANDO `df -h`):
+
+>$ df -h
+
+Filesystem      Size  Used Avail Use% Mounted on
+dev             3.9G     0  3.9G   0% /dev
+run             3.9G  1.3M  3.9G   1% /run
+/dev/sda1       196G   27G  160G  15% /
+tmpfs           3.9G  173M  3.7G   5% /dev/shm
+tmpfs           4.0M     0  4.0M   0% /sys/fs/cgroup
+tmpfs           3.9G  5.8M  3.9G   1% /tmp
+/dev/sda2       190M  103M   74M  59% /boot
+/dev/sda4       711G   89G  616G  13% /home
+tmpfs           787M  576K  787M   1% /run/user/1000
+
+/dev/sda refere-se ao disco. /dev/sda1 é uma partićão do disco, que está montada no diretório / (raíz do sistema)
+Portando, / é um ponto de montagem e /dev/sda1 é a partićão montada no mesmo.
+
+Semelhante a /home (ponto de montagem) e /dev/sda4 (partićão)
